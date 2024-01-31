@@ -1,0 +1,100 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "Livia",
+  "password" : "rahasia",
+  "name" : "siapa"
+}
+
+###
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "Livia",
+  "password" : "rahasia"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 35d21fd3-da8e-4e3c-b41d-78b85a6f5781
+
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 35d21fd3-da8e-4e3c-b41d-78b85a6f5781
+
+{
+  "name" : "namasaya"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 35d21fd3-da8e-4e3c-b41d-78b85a6f5781
+
+###
+
+POST http://localhost:3000/api/products
+Content-Type: application/json
+Accept: application/json
+Authorization: 1322b5a3-dd50-4545-a8bf-4d80d4ddbf93
+
+{
+  "name": "samsung",
+  "price": "90000000",
+  "stock": "2",
+  "description": "deskripsi",
+  "category": "android",
+  "imageUrl": "foto hp"
+}
+
+
+###
+
+GET http://localhost:3000/api/products
+Content-Type: application/json
+Accept: application/json
+Authorization:  1322b5a3-dd50-4545-a8bf-4d80d4ddbf93
+
+
+###
+
+GET http://localhost:3000/api/products/
+Content-Type: application/json
+Accept: application/json
+Authorization: 1322b5a3-dd50-4545-a8bf-4d80d4ddbf93
+
+###
+
+PUT http://localhost:3000/api/products/1426
+Content-Type: application/json
+Accept: application/json
+Authorization: 1322b5a3-dd50-4545-a8bf-4d80d4ddbf93
+
+{
+  "name": "baru",
+  "price": 109.0,
+  "stock": 5,
+  "description": "Updated Deskripsi produk",
+  "category": "Elektronik",
+  "imageUrl": "url foto produk"
+}
+
+###
+
+DELETE http://localhost:3000/api/products/1426
+Content-Type: application/json
+Accept: application/json
+Authorization: 1322b5a3-dd50-4545-a8bf-4d80d4ddbf93
